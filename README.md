@@ -8,7 +8,6 @@
 
 <img src="docs/screenshot.png" alt="外卖红黑榜界面" width="380">
 
-运行 Android 版时连接设备或启动模拟器。运行 iOS 版时使用安装了 Xcode 的 Mac，并启动 iOS 模拟器。
 
 ```powershell
 flutter pub get
