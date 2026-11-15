@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 
 import 'package:material_ui/material_ui.dart';
 import 'package:flutter/services.dart';
@@ -225,7 +226,8 @@ class _BoardState extends State<Board> with WidgetsBindingObserver {
                   enabled: ready,
                   child: const Text('导入好友评价'),
                 ),
-                const PopupMenuItem(value: 'overlay', child: Text('悬浮窗')),
+                if (!kIsWeb && defaultTargetPlatform == TargetPlatform.android)
+                  const PopupMenuItem(value: 'overlay', child: Text('悬浮窗')),
               ],
             ),
           ],
